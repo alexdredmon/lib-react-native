@@ -1,18 +1,15 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, TouchableOpacity, View } from 'react-native';
 
 
-export const ViewMobile = props => {
+export const ViewMobile = props =>  {
   const {
-    children,
+    onClick: onPress,
     ...rest
   } = props
 
-  return (
-    <View {...rest}>
-      { children }
-    </View>
-  )
+  const Component = onPress ? TouchableOpacity : View
+  return <Component onPress={onPress} {...rest} />
 }
 
 export default ViewMobile

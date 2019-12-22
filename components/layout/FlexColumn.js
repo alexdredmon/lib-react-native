@@ -5,11 +5,12 @@ import View from 'lib/components/layout/View'
 
 
 export const FlexColumnMobile = props => (
-  <View style={{
+  <View
+    style={{
     ...styles.body,
-  }}>
-    {props.children}
-  </View>
+    }}
+    {...props}
+  />
 )
 
 

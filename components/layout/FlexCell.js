@@ -5,17 +5,21 @@ import View from 'lib/components/layout/View'
 
 
 export const FlexCellMobile = props => (
-  <View style={styles.body}>
+  <View
+    style={{
+      ...styles.body,
+      alignItems: props.alignItems || 'center',
+      justifyContent: props.justifyContent || 'center',
+    }}
+  >
     {props.children}
   </View>
 )
 
 styles = StyleSheet.create({
   body: {
-    alignItems: 'center',
     display: 'flex',
     flex: 1,
-    justifyContent: 'center',
   },
 })
 

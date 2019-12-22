@@ -5,12 +5,19 @@ import { StyleSheet, Text } from 'react-native'
 export const TextMobile = props => {
   const {
     children,
-    fontSize=16
+    style,
   } = props
+
+  const {
+    textDecoration,
+    ...restStyle
+  } = style || {}
+  const textDecorationLine = textDecoration
 
   return (
     <Text style={{
-      fontSize: fontSize
+      ...restStyle,
+      textDecorationLine,
     }}>
       { children }
     </Text>
