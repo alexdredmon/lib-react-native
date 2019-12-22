@@ -4,14 +4,18 @@ import { StyleSheet, View } from 'react-native';
 
 
 export const BodyMobile = props => (
-  <View style={styles.body}>
+  <View
+    style={{
+      ...styles.body,
+      height: Math.round(Dimensions.get('window').height) - (props.headerHeight || 80),
+    }}
+  >
     {props.children}
   </View>
 )
 
 const styles = StyleSheet.create({
   body: {
-    height: Math.round(Dimensions.get('window').height),
     padding: 10,
     paddingTop: 50,
   },

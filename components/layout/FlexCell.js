@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
 
-import View from 'components/layout/View'
+import View from 'lib/components/layout/View'
 
 
 export const FlexCellMobile = props => (
@@ -12,8 +12,10 @@ export const FlexCellMobile = props => (
 
 styles = StyleSheet.create({
   body: {
+    alignItems: 'center',
     display: 'flex',
     flex: 1,
+    justifyContent: 'center',
   },
 })
 
