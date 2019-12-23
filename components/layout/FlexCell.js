@@ -10,6 +10,7 @@ export const FlexCellMobile = props => (
       ...styles.body,
       alignItems: props.alignItems || 'center',
       justifyContent: props.justifyContent || 'center',
+      ...props.style,
     }}
   >
     {props.children}
