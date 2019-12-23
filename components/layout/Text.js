@@ -9,6 +9,7 @@ export const TextMobile = props => {
   } = props
 
   const {
+    cursor,
     textDecoration,
     ...restStyle
   } = style || {}
