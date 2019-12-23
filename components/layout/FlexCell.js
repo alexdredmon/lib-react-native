@@ -4,18 +4,25 @@ import { StyleSheet } from 'react-native'
 import View from 'lib/components/layout/View'
 
 
-export const FlexCellMobile = props => (
-  <View
-    style={{
-      ...styles.body,
-      alignItems: props.alignItems || 'center',
-      justifyContent: props.justifyContent || 'center',
-      ...props.style,
-    }}
-  >
-    {props.children}
-  </View>
-)
+export const FlexCellMobile = props => {
+  const {
+    style,
+    ...rest
+  } = props
+  return (
+    <View
+      style={{
+        ...styles.body,
+        alignItems: props.alignItems || 'center',
+        justifyContent: props.justifyContent || 'center',
+        ...style,
+      }}
+      {...rest}
+    >
+      {props.children}
+    </View>
+  )
+}
 
 styles = StyleSheet.create({
   body: {
