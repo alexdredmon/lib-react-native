@@ -7,7 +7,8 @@ export const BodyMobile = props => (
   <View
     style={{
       ...styles.body,
-      height: Math.round(Dimensions.get('window').height) - (props.headerHeight || 80),
+      ...props.style,
+      height: Math.round(Dimensions.get('window').height),
     }}
   >
     {props.children}
@@ -18,6 +19,7 @@ const styles = StyleSheet.create({
   body: {
     padding: 10,
     paddingTop: 50,
+    paddingBottom: 90,
   },
 })
 
