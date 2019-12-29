@@ -4,21 +4,23 @@ import { StyleSheet } from 'react-native'
 import View from 'lib/components/layout/View'
 
 
-export const FlexRowMobile = props => (
-  <View
-    style={{
-    ...styles.body,
-    }}
-    {...props}
-  />
-)
+export const FlexRowMobile = props => {
+  const {
+    style,
+    ...rest
+  } = props
 
+  return (
+    <View
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        ...style,
+      }}
+      {...rest}
+    />
+  )
+}
 
-const styles = StyleSheet.create({
-  body: {
-    display: 'flex',
-    flexDirection: 'row',
-  },
-})
 
 export default FlexRowMobile

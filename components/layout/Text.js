@@ -10,6 +10,7 @@ export const TextMobile = props => {
 
   const {
     cursor,
+    fontWeight,
     textDecoration,
     ...restStyle
   } = style || {}
@@ -18,6 +19,7 @@ export const TextMobile = props => {
   return (
     <Text style={{
       ...restStyle,
+      fontWeight: fontWeight ? fontWeight.toString() : null,
       textDecorationLine,
     }}>
       { children }
