@@ -11,7 +11,7 @@ const mobileAudioMiddleware = store => next => async action => {
     
     if (action.type === PLAY_SOUND) {
         const { sound, status } = await Audio.Sound.createAsync(
-          action.source,
+          action.mobileSource,
           {
             shouldPlay: true,
             volume: action.volume,
