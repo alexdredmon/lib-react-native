@@ -9,6 +9,14 @@ export const FlexCellMobile = props => {
     style,
     ...rest
   } = props
+
+  let styles = StyleSheet.create({
+    body: {
+      display: 'flex',
+      flex: 1,
+    },
+  })
+
   return (
     <View
       style={{
@@ -23,12 +31,5 @@ export const FlexCellMobile = props => {
     </View>
   )
 }
-
-styles = StyleSheet.create({
-  body: {
-    display: 'flex',
-    flex: 1,
-  },
-})
 
 export default FlexCellMobile
